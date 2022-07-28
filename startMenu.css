@@ -1,0 +1,120 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url("Images/짭코스타트메뉴배경.png");
+    background-repeat: no-repeat;
+}
+#buttonsBackground {
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items : center;
+    position: relative;
+    animation-name: disappearDivButtons;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+#gameStartButton, #optionButton {
+    animation-name: disappearInputButtons;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+@keyframes disappearDivButtons {
+    to {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+@keyframes disappearInputButtons {
+    from {
+        margin-left: 0;
+    }
+    50% {
+        margin-left: 150px;
+    }
+    to {
+        margin-left: -2500px;
+        display: none;
+        visibility : hidden;
+    }
+}
+
+@media only screen and (width: 1920px), (height: 1080px) { /*컴퓨터1 [mine] ver2*/
+    body {
+        background-color: black;
+        background-size: 1643px;
+        background-position: center 0;
+    }
+    #buttonsBackground {
+        height: 230px;
+        top: 642px;
+    }
+    #gameStartButton, input#optionButton {
+        width: 600px;
+        height: 80px;
+        margin: 10px;
+        font-size: 45px;
+        font-weight: bold;
+    }
+    div#gap {
+        display: none;
+    }
+}
+
+@media only screen and (width: 2560px), (height: 1600px) { /*갤탭S4 [mine]*/
+    div#buttons {
+        height: 230px;
+        top: 1000px;
+    }
+    input#gameStartButton, input#optionButton {
+        width: 600px;
+        height: 80px;
+        margin: 10px;
+        font-size: 45px;
+        font-weight: bold;
+    }
+    div#gap {
+        display: none;
+    }
+}
+
+@media only screen and (width: 2560px), (height: 1440px) { /*컴퓨터2*/
+
+}
+
+@media only screen and (width: 1536px), (height: 864px) { /*컴퓨터3*/
+
+}
+
+@media only screen and (width: 1920px), (height: 1200px) { /*갤탭A 8.0 with s pen(WUXGA해상도)*/
+    
+}
+
+@media only screen and (height: 1536px), (width: 2048px) { /*아이패드3, 4*/
+
+}
+
+@media only screen and (height: 2048px), (width: 2732px) { /*아이패드프로*/
+
+}
+
+@media only screen and (height: 1440px), (width: 2960px) { /*갤8, 갤8+, 갤8액티브, 갤노트8, 갤9*/
+
+}
+
+@media only screen and (height: 1440px), (width: 3040px) { /*갤10, 갤10+*/
+
+}
+
+@media only screen and (height: 1125px), (width: 2436px) { /*아이폰X*/
+
+}
+
+@media only screen and (height: 1440px), (width: 3200px) { /*갤20, 갤20+*/
+
+}

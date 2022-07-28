@@ -1,0 +1,50 @@
+@media only screen and (width: 1920px), (height: 1080px) { /*컴퓨터1*/
+    html, body {
+        width:  100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        display: block;
+    }
+    canvas {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+@media only screen and (width: 2560px), (height: 1440px) { /*컴퓨터2*/
+
+}
+
+@media only screen and (width: 1536px), (height: 864px) { /*컴퓨터3*/
+
+}
+
+@media only screen and (width: 1920px), (height: 1200px) { /*갤탭A 8.0 with s pen(WUXGA해상도)*/
+    
+}
+
+@media only screen and (height: 1536px), (width: 2048px) { /*아이패드3, 4*/
+
+}
+
+@media only screen and (height: 2048px), (width: 2732px) { /*아이패드프로*/
+
+}
+
+@media only screen and (height: 1440px), (width: 2960px) { /*갤8, 갤8+, 갤8액티브, 갤노트8, 갤9*/
+
+}
+
+@media only screen and (height: 1440px), (width: 3040px) { /*갤10, 갤10+*/
+
+}
+
+@media only screen and (height: 1125px), (width: 2436px) { /*아이폰X*/
+
+}
+
+@media only screen and (height: 1440px), (width: 3200px) { /*갤20, 갤20+*/
+
+}
