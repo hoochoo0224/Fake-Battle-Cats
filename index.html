@@ -10,11 +10,22 @@
     <title>짭코대전쟁</title>
 </head>
 <body>
-    <div id="buttonsBackground">
-        <input type="button" value="게임 스타트" onclick="gameStartButtonOnClick();" id="gameStartButton">
-        <input type="button" value="옵션" onclick="optionButtonOnClick();" id="optionButton">
+    <p id="version">Version 0.0.1</p>
+    <div id="startMenuButtons">
+        <div id="startMenuAnimation">
+            <input type="button" value="게임 스타트" onclick="gameStartButtonOnClick();" id="gameStartButton">
+            <input type="button" value="옵션" onclick="optionButtonOnClick();" id="optionButton">
+        </div>
     </div>
-    <div id="gap"></div>
+    <div id="stageMenuButtons">
+        <div id="choiceBox"></div>
+        <div id="stageMenuAnimation">
+            <input type="image" onclick="" id="worldChapterButton" src="Images/세계편.png">
+            <input type="image" onclick="" id="futureEpisodeButton">
+            <input type="image" onclick="" id="spaceChapterButton">
+            <input type="image" onclick="" id="legendStoryButton">
+        </div>
+    </div>
     
     <script src="startMenu.js"></script>
 </body>

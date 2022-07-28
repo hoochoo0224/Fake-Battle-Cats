@@ -1,25 +1,44 @@
-const element = document.documentElement;
-// const buttons = document.querySelector("div#buttons") as HTMLDivElement;
-// const gameStartButton = document.querySelector("input#gameSatrtButton") as HTMLInputElement;
-// const optionButton = document.querySelector("input#optionButton") as HTMLInputElement;
-const buttonsBackground = document.getElementById("buttonsBackground");
+const startMenuButtons = document.getElementById("startMenuButtons");
+const startMenuAnimation = document.getElementById("startMenuAnimation");
 const gameStartButton = document.getElementById("gameStartButton");
 const optionButton = document.getElementById("optionButton");
+const stageMenuButtons = document.getElementById("stageMenuButtons");
+const stageMenuAnimation = document.getElementById("stageMenuAnimation");
+const choiceBox = document.getElementById("choiceBox");
 
+const startMenuBGM = new Audio("Musics/startMenuBGM");
 
 window.matchMedia('(display-mode: fullscreen)').addEventListener('change', ({ matches }) => {
     if (matches) {
-        // 전체화면됨
+        document.body.style.backgroundSize = "cover";
     } else {
-        // 전체화면 나감
+        document.body.style.backgroundSize = "1643px";
     }
 });
 
+setInterval(function () {
+    const color = ["rgb(255, 255, 0)", "rgb(255, 0, 255)"];
+    let i = 0;
+
+    if (choiceBox != null) {
+        if (i == 0) {
+            choiceBox.style.borderColor = color[i++];
+        }
+        else if (i != 0) {
+            choiceBox.style.borderColor = color[i--];
+        }
+    }
+}, 200);
+
 function gameStartButtonOnClick() {
-    if (buttonsBackground != null && gameStartButton != null && optionButton != null) {
-        buttonsBackground.style.animationPlayState = "running";
-        gameStartButton.style.animationPlayState = "running";
-        optionButton.style.animationPlayState = "running";
+    startMenuBGM.play();
+    if (startMenuButtons != null && startMenuAnimation != null) {
+        startMenuButtons.style.animationPlayState = "running";
+        startMenuAnimation.style.animationPlayState = "running";
+    }
+    if (stageMenuButtons != null && stageMenuAnimation != null) {
+        stageMenuButtons.style.animationPlayState = "running";
+        stageMenuAnimation.style.animationPlayState = "running";
     }
 }
 
