@@ -36,9 +36,10 @@ function gameStartButtonOnClick() {
         startMenuButtons.style.animationPlayState = "running";
         startMenuAnimation.style.animationPlayState = "running";
     }
-    if (stageMenuButtons != null && stageMenuAnimation != null) {
+    if (stageMenuButtons != null && stageMenuAnimation != null && choiceBox != null) {
         stageMenuButtons.style.animationPlayState = "running";
         stageMenuAnimation.style.animationPlayState = "running";
+        choiceBox.style.animationPlayState = "running";
     }
 }
 

@@ -11,7 +11,6 @@ body::-webkit-scrollbar {
     display: none;
 }
 #startMenuButtons {
-    z-index: 7;
     position: relative;
     background-color: rgba(0, 0, 0, 0.4);
     animation-name: disappearDivStartMenuButtons;
@@ -20,7 +19,6 @@ body::-webkit-scrollbar {
     animation-play-state: paused;
 }
 #startMenuAnimation {
-    z-index: 8;
     text-align: center;
     display : flex;
     flex-direction: column;
@@ -50,13 +48,19 @@ body::-webkit-scrollbar {
     align-items : center;
     position: relative;
     animation-name: appearInputStageMenuButtons;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-play-state: paused;
 }
 #choiceBox {
+    visibility: visible;
     z-index: 9;
     position: relative;
+    animation-name: appearChoiceBox;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
 }
 #gameStartButton, #optionButton {
     z-index: 10;
@@ -93,13 +97,19 @@ body::-webkit-scrollbar {
         }
     }
     @keyframes appearInputStageMenuButtons {
-        30% {
-            left: 2700px;
+        50% {
+            left: 2400px;
         }
         to {
             left: 800px;
         }
     }
+    @keyframes appearChoiceBox {
+        to {
+            visibility: visible;
+        }
+    }
+
     body {
         background-color: black;
         background-size: 1643px;
@@ -140,7 +150,7 @@ body::-webkit-scrollbar {
         margin-left: 5px;
         margin-right: 5px;
         /* margin-top: 85px; */
-        margin-top: 0px;
+        margin-top: -250px;
     }
 }
 
